@@ -14,8 +14,8 @@ app.use(passport.session());
 
 // --- Configurar Passport con Google ---
 passport.use(new GoogleStrategy({
-  clientID: '386509328621-gm31oef54aandap26aotbnijijgfr0cb.apps.googleusercontent.com', //Lo conseguimos con el cliente de Google Console
-  clientSecret: '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', //En el caso de ser un trabajo real y no un trabajo practico, guardaria todo en variables de entorno en mi archivo .env.
+  clientID: 'ClientId', //Lo conseguimos con el cliente de Google Console
+  clientSecret: 'ClientIDSecret', //En el caso de ser un trabajo real y no un trabajo practico, guardaria todo en variables de entorno en mi archivo .env.
   callbackURL: '/auth/google/callback'
 }, (accessToken, refreshToken, profile, done) => {
   return done(null, profile); // En una aplicacion real, guardaria el usuario en la base de datos y lo buscaria por su id.
